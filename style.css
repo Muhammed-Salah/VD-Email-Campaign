@@ -649,7 +649,6 @@ footer strong { color: var(--gold); }
 
 @media (max-width: 640px) {
   body { overflow-x: hidden; }
-  .hero { height: 100vh; }
   .nav-inner,
   .hero-body,
   .hero-footer-bar,
@@ -676,6 +675,7 @@ footer strong { color: var(--gold); }
   .hero-text {
     flex: none;
     width: 100%;
+    margin-top: 2rem;
   }
   .hero-visual {
     flex: none;
@@ -686,11 +686,19 @@ footer strong { color: var(--gold); }
     max-width: 220px;
     padding: 0.6rem 0.6rem 2.2rem 0.6rem;
     transform: rotate(-3deg);
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
   }
   .frame-caption {
     bottom: 0.65rem;
     font-size: 0.7rem;
+  }
+  .hero-eyebrow {
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .hero-eyebrow::before {
+    display: none;
   }
   .hero-title {
     font-size: clamp(1.8rem, 9vw, 2.5rem);
