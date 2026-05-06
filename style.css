@@ -15,7 +15,7 @@
   --text:        #1a1a1a;
   --text-muted:  #6b6b6b;
   --radius:      4px;
-  --container:   1000px;
+  --container:   1200px;
 }
 
 /* ---- RESET ---- */
@@ -63,7 +63,7 @@ body  {
 
 /* ---- NAV ---- */
 nav {
-  padding: 2rem 3rem;
+  padding: 2rem 0;
   position: relative;
   z-index: 2;
 }
@@ -73,6 +73,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 3rem;
 }
 .nav-brand {
   font-family: 'Playfair Display', serif;
@@ -561,11 +562,12 @@ textarea { resize: vertical; min-height: 90px; }
 .disclaimer-section {
   background: var(--cream-dark);
   border-top: 1px solid #d8d0c0;
-  padding: 4rem 3rem;
+  padding: 4rem 0;
 }
 .disclaimer-inner {
   max-width: var(--container);
   margin: 0 auto;
+  padding: 0 3rem;
 }
 .disclaimer-grid {
   display: grid;
@@ -648,9 +650,11 @@ footer strong { color: var(--gold); }
 @media (max-width: 640px) {
   body { overflow-x: hidden; }
   .hero { height: 100vh; }
-  nav,
+  .nav-inner,
   .hero-body,
-  .hero-footer-bar { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .hero-footer-bar,
+  .form-wrap,
+  .disclaimer-inner { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
 
   .form-grid          { grid-template-columns: 1fr; }
   .form-group.full    { grid-column: 1; }
