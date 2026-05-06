@@ -85,30 +85,45 @@
 
       <div class="form-group">
         <label for="district">Your District <span class="opt">optional</span></label>
-        <select id="district" onchange="resetTemplate(); updatePreview()">
-          <option value="">Select district</option>
-          <option>Thiruvananthapuram</option>
-          <option>Kollam</option>
-          <option>Pathanamthitta</option>
-          <option>Alappuzha</option>
-          <option>Kottayam</option>
-          <option>Idukki</option>
-          <option>Ernakulam</option>
-          <option>Thrissur</option>
-          <option>Palakkad</option>
-          <option>Malappuram</option>
-          <option>Kozhikode</option>
-          <option>Wayanad</option>
-          <option>Kannur</option>
-          <option>Kasaragod</option>
-        </select>
+        <div class="custom-select-container">
+          <input type="hidden" id="district" value="" />
+          <div class="select-trigger" id="district-trigger">
+            <span>Select district</span>
+            <svg viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="dropdown-panel" id="district-panel">
+            <div class="search-container">
+              <input type="text" id="district-search" placeholder="Search district..." autocomplete="off" />
+            </div>
+            <div class="options-list" id="district-options">
+              <div class="option-item" data-value="">Select district</div>
+              <div class="option-item" data-value="Thiruvananthapuram">Thiruvananthapuram</div>
+              <div class="option-item" data-value="Kollam">Kollam</div>
+              <div class="option-item" data-value="Pathanamthitta">Pathanamthitta</div>
+              <div class="option-item" data-value="Alappuzha">Alappuzha</div>
+              <div class="option-item" data-value="Kottayam">Kottayam</div>
+              <div class="option-item" data-value="Idukki">Idukki</div>
+              <div class="option-item" data-value="Ernakulam">Ernakulam</div>
+              <div class="option-item" data-value="Thrissur">Thrissur</div>
+              <div class="option-item" data-value="Palakkad">Palakkad</div>
+              <div class="option-item" data-value="Malappuram">Malappuram</div>
+              <div class="option-item" data-value="Kozhikode">Kozhikode</div>
+              <div class="option-item" data-value="Wayanad">Wayanad</div>
+              <div class="option-item" data-value="Kannur">Kannur</div>
+              <div class="option-item" data-value="Kasaragod">Kasaragod</div>
+              <div class="no-results" id="district-no-results">No districts found</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- REASON CARDS -->
     <div class="reasons-label">
       Why do you support Satheeshan?
-      <span style="font-size:0.65rem;color:#ccc;margin-left:6px;font-weight:300;">optional — shapes your email tone</span>
+      <span style="font-size:0.65rem;color:#999;margin-left:6px;font-weight:300;font-style:italic;">optional — shapes your email tone</span>
     </div>
     <div class="reasons-grid">
       <div class="reason-card" data-reason="accountability" onclick="selectReason(this)">

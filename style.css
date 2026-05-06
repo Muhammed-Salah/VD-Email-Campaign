@@ -349,9 +349,11 @@ label {
   font-weight: 500;
 }
 label span.opt {
-  color: var(--cream-dark);
+  color: #999;
   margin-left: 0.4rem;
   font-size: 0.65rem;
+  font-weight: 300;
+  font-style: italic;
 }
 
 input, select, textarea {
@@ -378,6 +380,139 @@ select {
   padding-right: 2.5rem;
 }
 textarea { resize: vertical; min-height: 90px; }
+ 
+/* ---- CUSTOM SEARCHABLE SELECT ---- */
+.custom-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid var(--cream-dark);
+  background: var(--cream);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.select-trigger:hover {
+  border-color: var(--gold-light);
+}
+
+.select-trigger.active {
+  border-color: var(--green-light);
+  background: var(--white);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.select-trigger span {
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.select-trigger svg {
+  width: 12px;
+  height: 8px;
+  stroke: var(--text-muted);
+  transition: transform 0.2s;
+}
+
+.select-trigger.active svg {
+  transform: rotate(180deg);
+}
+
+.dropdown-panel {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border: 1.5px solid var(--green-light);
+  border-radius: var(--radius);
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: none;
+  overflow: hidden;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-panel.show {
+  display: block;
+}
+
+.search-container {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--cream-dark);
+  background: var(--white);
+}
+
+.search-container input {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  border: 1px solid var(--cream-dark);
+  background: var(--cream);
+}
+
+.options-list {
+  max-height: 240px;
+  overflow-y: auto;
+  padding: 0.25rem 0;
+}
+
+.option-item {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  color: var(--text);
+}
+
+.option-item:hover {
+  background: var(--cream);
+  color: var(--green);
+}
+
+.option-item.selected {
+  background: var(--green);
+  color: var(--gold);
+}
+
+.option-item.hidden {
+  display: none;
+}
+
+.no-results {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: none;
+}
+
+.options-list::-webkit-scrollbar {
+  width: 6px;
+}
+.options-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.options-list::-webkit-scrollbar-thumb {
+  background: var(--cream-dark);
+  border-radius: 10px;
+}
+
 
 /* ---- REASON CARDS ---- */
 .reasons-label {

@@ -87,3 +87,92 @@ function copyEmail() {
     alert('Copy failed. Please manually select the text in the preview box and copy it.');
   });
 }
+ 
+// ---- CUSTOM DROPDOWN LOGIC ----
+document.addEventListener('DOMContentLoaded', () => {
+  const trigger = document.getElementById('district-trigger');
+  const panel = document.getElementById('district-panel');
+  const searchInput = document.getElementById('district-search');
+  const optionsList = document.getElementById('district-options');
+  const hiddenInput = document.getElementById('district');
+  const noResults = document.getElementById('district-no-results');
+  const optionItems = optionsList.querySelectorAll('.option-item');
+
+  // Toggle dropdown
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isShowing = panel.classList.contains('show');
+    
+    // Close all other dropdowns if any
+    document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.remove('show'));
+    document.querySelectorAll('.select-trigger').forEach(t => t.classList.remove('active'));
+
+    if (!isShowing) {
+      panel.classList.add('show');
+      trigger.classList.add('active');
+      searchInput.focus();
+    }
+  });
+
+  // Search/Filter logic
+  searchInput.addEventListener('input', (e) => {
+    const term = e.target.value.toLowerCase().trim();
+    let hasResults = false;
+
+    optionItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      if (text.includes(term)) {
+        item.classList.remove('hidden');
+        hasResults = true;
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+
+    noResults.style.display = hasResults ? 'none' : 'block';
+  });
+
+  // Selection logic
+  optionItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const value = item.dataset.value;
+      const text = item.textContent;
+
+      // Update hidden input
+      hiddenInput.value = value;
+      
+      // Update trigger UI
+      trigger.querySelector('span').textContent = text;
+      
+      // Mark as selected
+      optionItems.forEach(i => i.classList.remove('selected'));
+      item.classList.add('selected');
+
+      // Close panel
+      panel.classList.remove('show');
+      trigger.classList.remove('active');
+
+      // Reset search
+      searchInput.value = '';
+      optionItems.forEach(i => i.classList.remove('hidden'));
+      noResults.style.display = 'none';
+
+      // Trigger app updates
+      resetTemplate();
+      updatePreview();
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', () => {
+    panel.classList.remove('show');
+    trigger.classList.remove('active');
+  });
+
+  // Prevent closing when clicking inside panel
+  panel.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+});
+
