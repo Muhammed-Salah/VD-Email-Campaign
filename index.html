@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Make Your Voice Heard — VD Satheeshan for Kerala CM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===================================================
+     HERO
+=================================================== -->
+<section class="hero">
+  <div class="hero-grid-lines"></div>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-brand">Kerala Speaks</span>
+      <span class="nav-tag">Citizens' Campaign · 2026</span>
+    </div>
+  </nav>
+
+  <div class="hero-body">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Kerala Assembly Election 2026</div>
+      <h1 class="hero-title">
+        Kerala deserves<br />
+        a leader who<br />
+        <em>listens.</em>
+      </h1>
+      <div class="hero-action-hint">Tell the party high command: Kerala’s choice is clear.</div>
+      <button class="hero-cta" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
+        Send Email
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="hero-visual">
+      <div class="image-frame">
+        <img src="VD-2.png" alt="VD Satheeshan" />
+        <div class="frame-caption">Leadership through accountability</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     FORM SECTION
+=================================================== -->
+<section class="form-section" id="form-section">
+  <div class="form-wrap">
+
+    <div class="form-intro">
+      <div class="section-label">Your Voice</div>
+      <h2 class="section-title">Write to the party high command.</h2>
+      <p class="section-body">
+        Fill as much or as little as you like. A personalised email draft is prepared for you automatically — all you do is press send.
+      </p>
+      <span class="optional-note">All fields are optional</span>
+    </div>
+
+    <!-- PERSONAL DETAILS -->
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="name">Your Name <span class="opt">optional</span></label>
+        <input
+          type="text"
+          id="name"
+          placeholder="e.g. Anitha Krishnan"
+          oninput="resetTemplate(); updatePreview()"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="district">Your District <span class="opt">optional</span></label>
+        <select id="district" onchange="resetTemplate(); updatePreview()">
+          <option value="">Select district</option>
+          <option>Thiruvananthapuram</option>
+          <option>Kollam</option>
+          <option>Pathanamthitta</option>
+          <option>Alappuzha</option>
+          <option>Kottayam</option>
+          <option>Idukki</option>
+          <option>Ernakulam</option>
+          <option>Thrissur</option>
+          <option>Palakkad</option>
+          <option>Malappuram</option>
+          <option>Kozhikode</option>
+          <option>Wayanad</option>
+          <option>Kannur</option>
+          <option>Kasaragod</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- REASON CARDS -->
+    <div class="reasons-label">
+      Why do you support Satheeshan?
+      <span style="font-size:0.65rem;color:#ccc;margin-left:6px;font-weight:300;">optional — shapes your email tone</span>
+    </div>
+    <div class="reasons-grid">
+      <div class="reason-card" data-reason="accountability" onclick="selectReason(this)">
+        <div class="reason-title">Accountability</div>
+        <div class="reason-body">He held the LDF government to account every single session.</div>
+      </div>
+      <div class="reason-card" data-reason="organisation" onclick="selectReason(this)">
+        <div class="reason-title">Grassroots Strength</div>
+        <div class="reason-body">He rebuilt Congress from the booth level across all 14 districts.</div>
+      </div>
+      <div class="reason-card" data-reason="integrity" onclick="selectReason(this)">
+        <div class="reason-title">Integrity</div>
+        <div class="reason-body">He put his career on the line publicly — and delivered on that promise.</div>
+      </div>
+      <div class="reason-card" data-reason="promise" onclick="selectReason(this)">
+        <div class="reason-title">People's Choice</div>
+        <div class="reason-body">The mandate reflects his leadership. The people voted for him.</div>
+      </div>
+    </div>
+
+    <!-- EMAIL PREVIEW -->
+    <div class="preview-wrap">
+      <div class="preview-header">
+        <span>Email Draft Preview</span>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="template-badge" id="template-label">auto-selected</span>
+          <button class="refresh-btn" onclick="refreshTemplate()" title="Try another template">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path>
+              <polyline points="21 3 21 8 16 8"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="preview-meta-top">
+        <div><strong>To:</strong> <span id="preview-to"></span></div>
+        <div><strong>Subject:</strong> <span id="preview-subject"></span></div>
+      </div>
+      <div class="preview-body" id="preview-body"></div>
+    </div>
+
+    <!-- SEND ACTIONS -->
+    <div class="send-bar">
+      <a class="btn-primary" href="#" onclick="return openMail()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <polyline points="2,4 12,13 22,4"/>
+        </svg>
+        Sent Email
+      </a>
+      <button class="btn-secondary" onclick="copyEmail()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="9" y="9" width="13" height="13" rx="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        Copy Email Text
+      </button>
+    </div>
+    <p class="send-note">
+      Clicking "Send Email" launches your device's email app with this draft pre-filled. Nothing is sent automatically — you review and send it yourself.
+    </p>
+
+  </div>
+</section>
+
+<!-- ===================================================
+     DISCLAIMER
+=================================================== -->
+<section class="disclaimer-section">
+  <div class="disclaimer-inner">
+    <div class="section-label">Important Disclaimer</div>
+    <h2 class="section-title" style="font-size:1.5rem;">Please read before sending</h2>
+
+    <div class="disclaimer-grid">
+      <div class="disclaimer-card">
+        <div class="disclaimer-card-label">No Data Collection</div>
+        <p>This website does not collect, store, or transmit any information you enter. Your name and district are used solely to generate the email draft inside your browser. Nothing leaves your device until you choose to send the email yourself.</p>
+      </div>
+      <div class="disclaimer-card">
+        <div class="disclaimer-card-label">Your Own Action</div>
+        <p>Clicking "Send Email" opens your personal email application with a pre-filled draft. The email is sent only if you choose to send it, from your own inbox. We do not send anything on your behalf at any point.</p>
+      </div>
+      <div class="disclaimer-card">
+        <div class="disclaimer-card-label">Independent Campaign</div>
+        <p>This is an independent citizens' initiative. It is not affiliated with, endorsed by, or operated by the Indian National Congress, the UDF, or any political party or candidate. VD Satheeshan and his office have no association with this website.</p>
+      </div>
+      <div class="disclaimer-card">
+        <div class="disclaimer-card-label">Voluntary Participation</div>
+        <p>Participation is entirely voluntary. You may modify or discard the draft before sending. The templates represent general civic opinion and are not official statements. You are solely responsible for the content of any email you choose to send.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer-note">
+      By using this website, you acknowledge that you are voluntarily exercising your democratic right to communicate with political leaders. This website facilitates that communication and bears no responsibility for the content of emails sent by individual users. All opinions expressed are those of the individual sender.
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     FOOTER
+=================================================== -->
+<footer>
+  <p>This is an independent citizens' campaign in support of <strong>VD Satheeshan</strong> as Kerala's next Chief Minister.</p>
+  <p class="footer-sub">Not affiliated with INC, UDF, or any political party or candidate &nbsp;·&nbsp; No user data is collected or stored &nbsp;·&nbsp; All emails are sent by the user from their own device</p>
+</footer>
+
+<!-- ===================================================
+     SCRIPTS — templates.js must load before app.js
+=================================================== -->
+<script src="templates.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
