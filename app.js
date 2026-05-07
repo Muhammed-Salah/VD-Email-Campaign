@@ -70,16 +70,13 @@ function openMail() {
   const district = document.getElementById('district').value;
   const email    = buildEmail(name, district, selectedReason);
 
-  // Track event (Vercel Analytics)
-  if (window.va) {
-    window.va('event', { 
-      name: 'email_intent_send',
-      data: {
-        template: email.label,
-        reason: selectedReason || 'none',
-        has_name: !!name,
-        has_district: !!district
-      }
+  // Track event (Google Analytics)
+  if (window.gtag) {
+    window.gtag('event', 'email_intent_send', {
+      'template': email.label,
+      'reason': selectedReason || 'none',
+      'has_name': !!name,
+      'has_district': !!district
     });
   }
 
@@ -97,14 +94,11 @@ function copyEmail() {
   const district = document.getElementById('district').value;
   const email    = buildEmail(name, district, selectedReason);
 
-  // Track event (Vercel Analytics)
-  if (window.va) {
-    window.va('event', { 
-      name: 'email_intent_copy',
-      data: {
-        template: email.label,
-        reason: selectedReason || 'none'
-      }
+  // Track event (Google Analytics)
+  if (window.gtag) {
+    window.gtag('event', 'email_intent_copy', {
+      'template': email.label,
+      'reason': selectedReason || 'none'
     });
   }
 
