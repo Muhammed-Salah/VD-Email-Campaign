@@ -70,6 +70,19 @@ function openMail() {
   const district = document.getElementById('district').value;
   const email    = buildEmail(name, district, selectedReason);
 
+  // Track event (Vercel Analytics)
+  if (window.va) {
+    window.va('event', { 
+      name: 'email_intent_send',
+      data: {
+        template: email.label,
+        reason: selectedReason || 'none',
+        has_name: !!name,
+        has_district: !!district
+      }
+    });
+  }
+
   const mailto = `mailto:${email.recipients}`
     + `?subject=${encodeURIComponent(email.subject)}`
     + `&body=${encodeURIComponent(email.body)}`;
@@ -83,6 +96,17 @@ function copyEmail() {
   const name     = document.getElementById('name').value.trim();
   const district = document.getElementById('district').value;
   const email    = buildEmail(name, district, selectedReason);
+
+  // Track event (Vercel Analytics)
+  if (window.va) {
+    window.va('event', { 
+      name: 'email_intent_copy',
+      data: {
+        template: email.label,
+        reason: selectedReason || 'none'
+      }
+    });
+  }
 
   const full = `To: ${email.recipients}\nSubject: ${email.subject}\n\n${email.body}`;
 
