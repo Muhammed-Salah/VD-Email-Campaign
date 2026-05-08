@@ -62,10 +62,20 @@ function updatePreview() {
   // Template badge
   document.getElementById('template-label').textContent =
     `Template ${email.id} · ${email.label}`;
+
+  // Update mailto link directly on the button to prevent iOS blocking
+  const mailtoUrl = `mailto:${email.recipients}`
+    + `?subject=${encodeURIComponent(email.subject)}`
+    + `&body=${encodeURIComponent(email.body)}`;
+  
+  const sendBtn = document.getElementById('btn-send-email');
+  if (sendBtn) {
+    sendBtn.href = mailtoUrl;
+  }
 }
 
-// ---- SEND EMAIL ----
-function openMail() {
+// ---- SEND EMAIL TRACKING ----
+function trackEmailClick() {
   const name     = document.getElementById('name').value.trim();
   const district = document.getElementById('district').value;
   const email    = buildEmail(name, district, selectedReason);
@@ -80,12 +90,7 @@ function openMail() {
     });
   }
 
-  const mailto = `mailto:${email.recipients}`
-    + `?subject=${encodeURIComponent(email.subject)}`
-    + `&body=${encodeURIComponent(email.body)}`;
-
-  window.location.href = mailto;
-  return false;
+  return true;
 }
 
 // ---- COPY EMAIL TEXT ----
