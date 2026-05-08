@@ -74,6 +74,12 @@ function updatePreview() {
   }
 }
 
+// ---- URL PARAMS HELPER ----
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param) || 'direct';
+}
+
 // ---- SEND EMAIL TRACKING ----
 function trackEmailClick() {
   const name     = document.getElementById('name').value.trim();
@@ -86,7 +92,10 @@ function trackEmailClick() {
       'template': email.label,
       'reason': selectedReason || 'none',
       'has_name': !!name,
-      'has_district': !!district
+      'has_district': !!district,
+      'utm_source': getQueryParam('utm_source'),
+      'utm_medium': getQueryParam('utm_medium'),
+      'utm_campaign': getQueryParam('utm_campaign')
     });
   }
 
@@ -103,7 +112,10 @@ function copyEmail() {
   if (window.gtag) {
     window.gtag('event', 'email_intent_copy', {
       'template': email.label,
-      'reason': selectedReason || 'none'
+      'reason': selectedReason || 'none',
+      'utm_source': getQueryParam('utm_source'),
+      'utm_medium': getQueryParam('utm_medium'),
+      'utm_campaign': getQueryParam('utm_campaign')
     });
   }
 
