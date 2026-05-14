@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/(?!style.css|app.js|VD-2.png|VDS.html|noVDS.html|index.html).*",
+      "destination": "/"
+    }
+  ]
+}
