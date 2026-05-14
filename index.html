@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our voices were heard — VD Satheeshan for Kerala CM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet" />
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Manjari:wght@400;700&display=swap"
+    rel="stylesheet" />
+
   <!-- Social Media Sharing Tags -->
   <meta property="og:title" content="Kerala has chosen its leader — V.D. Satheeshan" />
-  <meta property="og:description" content="The voice of the citizens was heard. V.D. Satheeshan is appointed as the Chief Minister of Kerala." />
-  <meta property="og:image" content="https://vds-email-campaign.vercel.app/image.png?v=1" />
-  <meta property="og:image:secure_url" content="https://vds-email-campaign.vercel.app/image.png?v=1" />
+  <meta property="og:description"
+    content="The voice of the citizens was heard. V.D. Satheeshan is appointed as the Chief Minister of Kerala." />
+  <meta property="og:image" content="https://vds-email-campaign.vercel.app/image.webp?v=1" />
+  <meta property="og:image:secure_url" content="https://vds-email-campaign.vercel.app/image.webp?v=1" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -21,14 +25,15 @@
   <meta property="og:site_name" content="Kerala Speaks" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Kerala has chosen its leader — V.D. Satheeshan" />
-  <meta name="twitter:description" content="The voice of the citizens was heard. V.D. Satheeshan is appointed as the Chief Minister of Kerala." />
-  <meta name="twitter:image" content="https://vds-email-campaign.vercel.app/image.png?v=1" />
-  
+  <meta name="twitter:description"
+    content="The voice of the citizens was heard. V.D. Satheeshan is appointed as the Chief Minister of Kerala." />
+  <meta name="twitter:image" content="https://vds-email-campaign.vercel.app/image.webp?v=1" />
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GYMGSN928"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-0GYMGSN928');
   </script>
@@ -48,6 +53,7 @@
       margin-top: 1.5rem;
       width: 100%;
     }
+
     .compact-stat-card {
       background: rgba(245, 240, 232, 0.05);
       border: 1px solid rgba(200, 168, 75, 0.15);
@@ -55,6 +61,7 @@
       border-radius: 8px;
       text-align: center;
     }
+
     .compact-stat-num {
       color: var(--gold);
       font-family: 'Playfair Display', serif;
@@ -62,6 +69,7 @@
       font-weight: 700;
       display: block;
     }
+
     .compact-stat-label {
       color: rgba(245, 240, 232, 0.5);
       font-size: 0.65rem;
@@ -72,7 +80,7 @@
 
     /* Celebration & Victory Vibes */
     .hero.victory-vibe {
-      background: 
+      background:
         radial-gradient(ellipse at 70% 30%, rgba(200, 168, 75, 0.25) 0%, transparent 60%),
         radial-gradient(ellipse at 10% 80%, rgba(61, 122, 85, 0.4) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(200, 168, 75, 0.1) 0%, transparent 70%),
@@ -97,8 +105,17 @@
     }
 
     @keyframes pulse-glow {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.2); opacity: 0.8; }
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+      }
     }
 
     /* Floating Sparkles */
@@ -115,10 +132,23 @@
     }
 
     @keyframes fly {
-      0% { transform: translateY(100vh) scale(0); opacity: 0; }
-      20% { opacity: 0.8; }
-      80% { opacity: 0.8; }
-      100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0.8;
+      }
+
+      80% {
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: translateY(-10vh) scale(1.5);
+        opacity: 0;
+      }
     }
 
     /* Gold Viewport Frame */
@@ -139,12 +169,10 @@
       transform: translate(-50%, -50%);
       width: 150vh;
       height: 150vh;
-      background: conic-gradient(
-        from 0deg,
-        transparent 0deg,
-        rgba(200, 168, 75, 0.05) 15deg,
-        transparent 30deg
-      );
+      background: conic-gradient(from 0deg,
+          transparent 0deg,
+          rgba(200, 168, 75, 0.05) 15deg,
+          transparent 30deg);
       background-repeat: repeat;
       animation: rotate-rays 60s linear infinite;
       pointer-events: none;
@@ -152,8 +180,13 @@
     }
 
     @keyframes rotate-rays {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to { transform: translate(-50%, -50%) rotate(360deg); }
+      from {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
     }
 
     .hero-title em {
@@ -173,25 +206,41 @@
       font-size: 0.8rem;
       letter-spacing: 0.2em;
       transform: rotate(45deg);
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       z-index: 10;
       text-transform: uppercase;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     /* Language Switcher Overrides */
     :root {
-      --ml-scale: 0.92; /* Adjust this to scale all Malayalam text slightly */
+      --ml-scale: 0.92;
+      /* Adjust this to scale all Malayalam text slightly */
     }
 
     [lang="ml"] {
       font-size: calc(100% * var(--ml-scale));
     }
 
-    [lang="ml"] body { font-family: 'Manjari', sans-serif; }
-    [lang="ml"] .hero-title { font-family: 'Manjari', sans-serif; font-size: 4.2rem; line-height: 1.2; }
-    [lang="ml"] .hero-title em { font-style: normal; color: var(--gold); }
-    [lang="ml"] .victory-sash { font-family: 'Manjari', sans-serif; font-weight: 700; }
+    [lang="ml"] body {
+      font-family: 'Manjari', sans-serif;
+    }
+
+    [lang="ml"] .hero-title {
+      font-family: 'Manjari', sans-serif;
+      font-size: 4.2rem;
+      line-height: 1.2;
+    }
+
+    [lang="ml"] .hero-title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    [lang="ml"] .victory-sash {
+      font-family: 'Manjari', sans-serif;
+      font-weight: 700;
+    }
 
     @media (max-width: 1024px) {
       .hero-body {
@@ -200,21 +249,26 @@
         padding-bottom: 200px !important;
         height: auto !important;
       }
+
       .compact-stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .hero-visual {
         margin-top: 0.5rem;
       }
+
       .sunburst-rays {
         left: 50%;
         top: 70%;
         width: 100vh;
         height: 100vh;
       }
+
       body::after {
         inset: 0.5rem;
       }
+
       .victory-sash {
         top: 10px;
         right: -40px;
@@ -230,227 +284,245 @@
     }
   </style>
 </head>
+
 <body data-lang="en">
 
-<!-- ===================================================
+  <!-- ===================================================
      HERO (Standalone Compact - Combined)
 =================================================== -->
-<section class="hero victory-vibe" style="display: flex; align-items: center; justify-content: center; position: relative; min-height: 100vh; overflow: hidden;">
-  <div class="hero-grid-lines"></div>
-  <div class="sunburst-rays"></div>
+  <section class="hero victory-vibe"
+    style="display: flex; align-items: center; justify-content: center; position: relative; min-height: 100vh; overflow: hidden;">
+    <div class="hero-grid-lines"></div>
+    <div class="sunburst-rays"></div>
 
-  <!-- NAV -->
-  <nav style="position: absolute; top: 0; left: 0; right: 0; z-index: 10;">
-    <div class="nav-inner">
-      <div style="display: flex; flex-direction: column;">
-        <span class="nav-brand" data-i18n="nav-brand">Kerala Speaks</span>
-        <span class="nav-tag" data-i18n="nav-tag">Citizens' Campaign · 2026</span>
+    <!-- NAV -->
+    <nav style="position: absolute; top: 0; left: 0; right: 0; z-index: 10;">
+      <div class="nav-inner">
+        <div style="display: flex; flex-direction: column;">
+          <span class="nav-brand" data-i18n="nav-brand">Kerala Speaks</span>
+          <span class="nav-tag" data-i18n="nav-tag">Citizens' Campaign · 2026</span>
+        </div>
+        <div class="lang-switcher"
+          style="background: rgba(245, 240, 232, 0.05); border: 1px solid rgba(200, 168, 75, 0.15); border-radius: 20px; padding: 4px; display: flex; gap: 4px;">
+          <button onclick="setLanguage('en')" id="lang-en"
+            style="background: var(--gold); color: #1a3c2a; border: none; padding: 4px 12px; border-radius: 16px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">EN</button>
+          <button onclick="setLanguage('ml')" id="lang-ml"
+            style="background: transparent; color: var(--cream); border: none; padding: 4px 12px; border-radius: 16px; font-size: 0.75rem; cursor: pointer;">മലയാളം</button>
+        </div>
       </div>
-      <div class="lang-switcher" style="background: rgba(245, 240, 232, 0.05); border: 1px solid rgba(200, 168, 75, 0.15); border-radius: 20px; padding: 4px; display: flex; gap: 4px;">
-        <button onclick="setLanguage('en')" id="lang-en" style="background: var(--gold); color: #1a3c2a; border: none; padding: 4px 12px; border-radius: 16px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">EN</button>
-        <button onclick="setLanguage('ml')" id="lang-ml" style="background: transparent; color: var(--cream); border: none; padding: 4px 12px; border-radius: 16px; font-size: 0.75rem; cursor: pointer;">മലയാളം</button>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="hero-body"
+      style="justify-content: space-between; align-items: center; max-width: 1100px; padding: 100px 2rem 140px 2rem; margin: 0 auto; width: 100%; box-sizing: border-box; display: flex; gap: 4rem;">
+
+      <div class="hero-text" style="flex: 1.2; text-align: left; margin: 0;">
+        <div class="hero-eyebrow" data-i18n="hero-eyebrow"
+          style="margin-bottom: 1.5rem; letter-spacing: 0.2em; font-weight: 700;">
+          A PEOPLE'S MANDATE HONORED
+        </div>
+        <h1 class="hero-title" id="hero-title" style="margin-bottom: 1rem; line-height: 1.1; font-size: 4.8rem;">
+          Kerala has<br />its <em>leader.</em>
+        </h1>
+        <p class="hero-subtitle" id="hero-subtitle"
+          style="font-size: 1.1rem; color: rgba(245, 240, 232, 0.9); max-width: 600px; line-height: 1.6; margin-bottom: 2rem;">
+          A new chapter for Kerala begins today. The High Command has heard the voice of the citizens, and <strong
+            style="color: var(--gold);">V.D. Satheeshan</strong> is appointed as Chief Minister. <span
+            style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold);">Thank you</span> for
+          your passion, your integrity, and for believing in the power of our collective voice. <br /><span
+            style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 1.25rem; display: inline-block; margin-top: 0.5rem;">This
+            victory belongs to you. We did it together.</span>
+        </p>
+
+        <!-- INTEGRATED STATS -->
+        <div class="compact-stats-grid">
+          <div class="compact-stat-card">
+            <span class="compact-stat-num" id="stat-reached">-</span>
+            <span class="compact-stat-label" data-i18n="stat-reached-label">Reached</span>
+          </div>
+          <div class="compact-stat-card">
+            <span class="compact-stat-num" id="stat-visits">-</span>
+            <span class="compact-stat-label" data-i18n="stat-visits-label">Visits</span>
+          </div>
+          <div class="compact-stat-card">
+            <span class="compact-stat-num" id="stat-emails">-</span>
+            <span class="compact-stat-label" data-i18n="stat-emails-label">Emails</span>
+          </div>
+          <div class="compact-stat-card">
+            <span class="compact-stat-num" id="stat-days">-</span>
+            <span class="compact-stat-label" data-i18n="stat-days-label">Days</span>
+          </div>
+        </div>
       </div>
+
+      <div class="hero-visual" style="flex: 1; display: flex; justify-content: flex-end;">
+        <div class="image-frame victory-glow" style="max-width: 320px; overflow: hidden;">
+          <div class="victory-sash" id="victory-sash">Victory</div>
+          <img src="VD-2.png" alt="VD Satheeshan" />
+          <div class="frame-caption" id="frame-caption">Kerala's Chosen Leader</div>
+        </div>
+      </div>
+
     </div>
-  </nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="hero-body" style="justify-content: space-between; align-items: center; max-width: 1100px; padding: 100px 2rem 140px 2rem; margin: 0 auto; width: 100%; box-sizing: border-box; display: flex; gap: 4rem;">
-    
-    <div class="hero-text" style="flex: 1.2; text-align: left; margin: 0;">
-      <div class="hero-eyebrow" data-i18n="hero-eyebrow" style="margin-bottom: 1.5rem; letter-spacing: 0.2em; font-weight: 700;">
-        A PEOPLE'S MANDATE HONORED
-      </div>
-      <h1 class="hero-title" id="hero-title" style="margin-bottom: 1rem; line-height: 1.1; font-size: 4.8rem;">
-        Kerala has<br />its <em>leader.</em>
-      </h1>
-      <p class="hero-subtitle" id="hero-subtitle" style="font-size: 1.1rem; color: rgba(245, 240, 232, 0.9); max-width: 600px; line-height: 1.6; margin-bottom: 2rem;">
-        A new chapter for Kerala begins today. The High Command has heard the voice of the citizens, and <strong style="color: var(--gold);">V.D. Satheeshan</strong> is appointed as Chief Minister. <span style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold);">Thank you</span> for your passion, your integrity, and for believing in the power of our collective voice. <br /><span style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--gold); font-size: 1.25rem; display: inline-block; margin-top: 0.5rem;">This victory belongs to you. We did it together.</span>
+    <!-- FOOTER -->
+    <div
+      style="position: absolute; bottom: 0; left: 0; right: 0; z-index: 10; padding: 2rem 3rem; text-align: center; border-top: 1px solid rgba(200, 168, 75, 0.15);">
+      <p data-i18n="footer-main"
+        style="color: var(--cream); font-size: 0.85rem; margin-bottom: 0.4rem; font-family: 'DM Sans', sans-serif;">
+        This was an independent citizens' campaign.
       </p>
-
-      <!-- INTEGRATED STATS -->
-      <div class="compact-stats-grid">
-        <div class="compact-stat-card">
-          <span class="compact-stat-num" id="stat-reached">-</span>
-          <span class="compact-stat-label" data-i18n="stat-reached-label">Reached</span>
-        </div>
-        <div class="compact-stat-card">
-          <span class="compact-stat-num" id="stat-visits">-</span>
-          <span class="compact-stat-label" data-i18n="stat-visits-label">Visits</span>
-        </div>
-        <div class="compact-stat-card">
-          <span class="compact-stat-num" id="stat-emails">-</span>
-          <span class="compact-stat-label" data-i18n="stat-emails-label">Emails</span>
-        </div>
-        <div class="compact-stat-card">
-          <span class="compact-stat-num" id="stat-days">-</span>
-          <span class="compact-stat-label" data-i18n="stat-days-label">Days</span>
-        </div>
-      </div>
+      <p data-i18n="footer-sub"
+        style="color: rgba(245, 240, 232, 0.45); font-size: 0.75rem; font-family: 'DM Sans', sans-serif; letter-spacing: 0.05em; margin-bottom: 0;">
+        Not affiliated with INC, UDF, or any political party or candidate.
+      </p>
+      <p data-i18n="footer-legal"
+        style="color: rgba(245, 240, 232, 0.15); font-size: 0.6rem; margin-top: 1rem; letter-spacing: 0.03em; text-transform: uppercase;">
+        Archived Public Initiative &nbsp;·&nbsp; No Liability Assumed &nbsp;·&nbsp; No User Data Collected
+      </p>
     </div>
 
-    <div class="hero-visual" style="flex: 1; display: flex; justify-content: flex-end;">
-      <div class="image-frame victory-glow" style="max-width: 320px; overflow: hidden;">
-        <div class="victory-sash" id="victory-sash">Victory</div>
-        <img src="VD-2.png" alt="VD Satheeshan" />
-        <div class="frame-caption" id="frame-caption">Kerala's Chosen Leader</div>
-      </div>
-    </div>
+  </section>
 
-  </div>
-
-  <!-- FOOTER -->
-  <div style="position: absolute; bottom: 0; left: 0; right: 0; z-index: 10; padding: 2rem 3rem; text-align: center; border-top: 1px solid rgba(200, 168, 75, 0.15);">
-    <p data-i18n="footer-main" style="color: var(--cream); font-size: 0.85rem; margin-bottom: 0.4rem; font-family: 'DM Sans', sans-serif;">
-      This was an independent citizens' campaign.
-    </p>
-    <p data-i18n="footer-sub" style="color: rgba(245, 240, 232, 0.45); font-size: 0.75rem; font-family: 'DM Sans', sans-serif; letter-spacing: 0.05em; margin-bottom: 0;">
-      Not affiliated with INC, UDF, or any political party or candidate.
-    </p>
-    <p data-i18n="footer-legal" style="color: rgba(245, 240, 232, 0.15); font-size: 0.6rem; margin-top: 1rem; letter-spacing: 0.03em; text-transform: uppercase;">
-      Archived Public Initiative &nbsp;·&nbsp; No Liability Assumed &nbsp;·&nbsp; No User Data Collected
-    </p>
-  </div>
-
-</section>
-
-<!-- ===================================================
+  <!-- ===================================================
      CELEBRATION EFFECTS & ANALYTICS
 =================================================== -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-<script>
-  const translations = {
-    en: {
-      "nav-brand": "Kerala Speaks",
-      "nav-tag": "Citizens' Campaign · 2026",
-      "hero-eyebrow": "A PEOPLE'S MANDATE HONORED",
-      "hero-title": "Kerala has<br />its <em>leader.</em>",
-      "hero-subtitle": "A new chapter for Kerala begins today. The High Command has heard the voice of the citizens, and <strong style='color: var(--gold);'>V.D. Satheeshan</strong> is appointed as Chief Minister. <span style='font-family: \"Playfair Display\", serif; font-style: italic; color: var(--gold);'>Thank you</span> for your passion, your integrity, and for believing in the power of our collective voice. <br /><span style='font-family: \"Playfair Display\", serif; font-style: italic; color: var(--gold); font-size: 1.25rem; display: inline-block; margin-top: 0.5rem;'>This victory belongs to you. We did it together.</span>",
-      "stat-reached-label": "Reached",
-      "stat-visits-label": "Visits",
-      "stat-emails-label": "Emails",
-      "stat-days-label": "Days",
-      "victory-sash": "Victory",
-      "frame-caption": "Kerala's Chosen Leader",
-      "footer-main": "This was an independent citizens' campaign.",
-      "footer-sub": "Not affiliated with INC, UDF, or any political party or candidate.",
-      "footer-legal": "Archived Public Initiative &nbsp;·&nbsp; No Liability Assumed &nbsp;·&nbsp; No User Data Collected"
-    },
-    ml: {
-      "nav-brand": "കേരളം സംസാരിക്കുന്നു",
-      "nav-tag": "ജനകീയ ക്യാമ്പയിൻ · 2026",
-      "hero-eyebrow": "ജനവിധി അംഗീകരിക്കപ്പെട്ടു",
-      "hero-title": "കേരളത്തിന് അതിന്റെ<br /><em>നേതാവിനെ ലഭിച്ചു.</em>",
-      "hero-subtitle": "കേരളത്തിന് ഇന്ന് ഒരു പുതിയ അധ്യായം തുടങ്ങുന്നു. ഹൈക്കമാൻഡ് ജനങ്ങളുടെ ശബ്ദം കേട്ടു. <strong style='color: var(--gold);'>വി.ഡി. സതീശനെ</strong> കേരള മുഖ്യമന്ത്രിയായി നിയോഗിച്ചു. നിങ്ങളുടെ ആവേശത്തിനും അർപ്പണബോധത്തിനും നമ്മുടെ കൂട്ടായ ശബ്ദത്തിലുള്ള വിശ്വാസത്തിനും <span style='color: var(--gold); font-weight: 700;'>നന്ദി</span>. <br /><span style='color: var(--gold); font-weight: 700; font-size: 1.25rem; display: inline-block; margin-top: 0.5rem;'>ഈ വിജയം നിങ്ങളുടേതാണ്. നമ്മൾ ഇത് ഒരുമിച്ച് സാധിച്ചെടുത്തു.</span>",
-      "stat-reached-label": "എത്തിച്ചേർന്നവർ",
-      "stat-visits-label": "സന്ദർശകർ",
-      "stat-emails-label": "ഇമെയിലുകൾ",
-      "stat-days-label": "ദിവസങ്ങൾ",
-      "victory-sash": "വിജയം",
-      "frame-caption": "കേരളം തിരഞ്ഞെടുത്ത നേതാവ്",
-      "footer-main": "ഇതൊരു സ്വതന്ത്ര ജനകീയ ക്യാമ്പയിനായിരുന്നു.",
-      "footer-sub": "INC, UDF അല്ലെങ്കിൽ ഏതെങ്കിലും രാഷ്ട്രീയ പാർട്ടിയുമായോ സ്ഥാനാർത്ഥിയുമായോ ബന്ധമില്ലാത്തത്.",
-      "footer-legal": "ആർക്കൈവ് ചെയ്ത ജനകീയ സംരംഭം &nbsp;·&nbsp; ബാധ്യതകളില്ല &nbsp;·&nbsp; വിവരങ്ങൾ ശേഖരിച്ചിട്ടില്ല"
-    }
-  };
-
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-  }
-
-  function setLanguage(lang, pushState = true) {
-    document.documentElement.lang = lang;
-    
-    // Update all elements with data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      if (translations[lang][key]) el.innerHTML = translations[lang][key];
-    });
-
-    // Update specific ID elements
-    document.getElementById('hero-title').innerHTML = translations[lang]['hero-title'];
-    document.getElementById('hero-subtitle').innerHTML = translations[lang]['hero-subtitle'];
-    document.getElementById('victory-sash').innerHTML = translations[lang]['victory-sash'];
-    document.getElementById('frame-caption').innerHTML = translations[lang]['frame-caption'];
-
-    // Update buttons
-    const btnEn = document.getElementById('lang-en');
-    const btnMl = document.getElementById('lang-ml');
-    if (lang === 'en') {
-      btnEn.style.background = 'var(--gold)'; btnEn.style.color = '#1a3c2a';
-      btnMl.style.background = 'transparent'; btnMl.style.color = 'var(--cream)';
-    } else {
-      btnMl.style.background = 'var(--gold)'; btnMl.style.color = '#1a3c2a';
-      btnEn.style.background = 'transparent'; btnEn.style.color = 'var(--cream)';
-    }
-
-    // Persist language in URL
-    if (pushState) {
-      const url = new URL(window.location);
-      url.searchParams.set('lang', lang);
-      window.history.pushState({}, '', url);
-    }
-  }
-
-  // Initial load logic
-  window.addEventListener('load', () => {
-    // Check URL for language preference
-    const langParam = getQueryParam('lang');
-    if (langParam === 'ml') {
-      setLanguage('ml', false);
-    }
-
-    const duration = 3 * 1000;
-    const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-    function randomInRange(min, max) { return Math.random() * (max - min) + min; }
-    const interval = setInterval(function() {
-      const timeLeft = animationEnd - Date.now();
-      if (timeLeft <= 0) return clearInterval(interval);
-      const particleCount = 50 * (timeLeft / duration);
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
-      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
-    }, 250);
-
-    animateValue("stat-reached", 0, 1100, 2000, "+");
-    animateValue("stat-visits", 0, 850, 2000, "+");
-    animateValue("stat-emails", 0, 300, 2000, "+");
-    animateValue("stat-days", 0, 7, 2000, "");
-  });
-
-  function animateValue(id, start, end, duration, suffix) {
-    const obj = document.getElementById(id);
-    let startTimestamp = null;
-    const step = (timestamp) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const val = Math.floor(progress * (end - start) + start);
-      obj.innerHTML = val + suffix;
-      if (progress < 1) window.requestAnimationFrame(step);
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const translations = {
+      en: {
+        "nav-brand": "Kerala Speaks",
+        "nav-tag": "Citizens' Campaign · 2026",
+        "hero-eyebrow": "A PEOPLE'S MANDATE HONORED",
+        "hero-title": "Kerala has<br />its <em>leader.</em>",
+        "hero-subtitle": "A new chapter for Kerala begins today. The High Command has heard the voice of the citizens, and <strong style='color: var(--gold);'>V.D. Satheeshan</strong> is appointed as Chief Minister. <span style='font-family: \"Playfair Display\", serif; font-style: italic; color: var(--gold);'>Thank you</span> for your passion, your integrity, and for believing in the power of our collective voice. <br /><span style='font-family: \"Playfair Display\", serif; font-style: italic; color: var(--gold); font-size: 1.25rem; display: inline-block; margin-top: 0.5rem;'>This victory belongs to you. We did it together.</span>",
+        "stat-reached-label": "Reached",
+        "stat-visits-label": "Visits",
+        "stat-emails-label": "Emails",
+        "stat-days-label": "Days",
+        "victory-sash": "Victory",
+        "frame-caption": "Kerala's Chosen Leader",
+        "footer-main": "This was an independent citizens' campaign.",
+        "footer-sub": "Not affiliated with INC, UDF, or any political party or candidate.",
+        "footer-legal": "Archived Public Initiative &nbsp;·&nbsp; No Liability Assumed &nbsp;·&nbsp; No User Data Collected"
+      },
+      ml: {
+        "nav-brand": "കേരളം സംസാരിക്കുന്നു",
+        "nav-tag": "ജനകീയ ക്യാമ്പയിൻ · 2026",
+        "hero-eyebrow": "ജനവിധി അംഗീകരിക്കപ്പെട്ടു",
+        "hero-title": "കേരളത്തിന് അതിന്റെ<br /><em>നേതാവിനെ ലഭിച്ചു.</em>",
+        "hero-subtitle": "കേരളത്തിന് ഇന്ന് ഒരു പുതിയ അധ്യായം തുടങ്ങുന്നു. ഹൈക്കമാൻഡ് ജനങ്ങളുടെ ശബ്ദം കേട്ടു. <strong style='color: var(--gold);'>വി.ഡി. സതീശനെ</strong> കേരള മുഖ്യമന്ത്രിയായി നിയോഗിച്ചു. നിങ്ങളുടെ ആവേശത്തിനും അർപ്പണബോധത്തിനും നമ്മുടെ കൂട്ടായ ശബ്ദത്തിലുള്ള വിശ്വാസത്തിനും <span style='color: var(--gold); font-weight: 700;'>നന്ദി</span>. <br /><span style='color: var(--gold); font-weight: 700; font-size: 1.25rem; display: inline-block; margin-top: 0.5rem;'>ഈ വിജയം നിങ്ങളുടേതാണ്. നമ്മൾ ഇത് ഒരുമിച്ച് സാധിച്ചെടുത്തു.</span>",
+        "stat-reached-label": "എത്തിച്ചേർന്നവർ",
+        "stat-visits-label": "സന്ദർശകർ",
+        "stat-emails-label": "ഇമെയിലുകൾ",
+        "stat-days-label": "ദിവസങ്ങൾ",
+        "victory-sash": "വിജയം",
+        "frame-caption": "കേരളം തിരഞ്ഞെടുത്ത നേതാവ്",
+        "footer-main": "ഇതൊരു സ്വതന്ത്ര ജനകീയ ക്യാമ്പയിനായിരുന്നു.",
+        "footer-sub": "INC, UDF അല്ലെങ്കിൽ ഏതെങ്കിലും രാഷ്ട്രീയ പാർട്ടിയുമായോ സ്ഥാനാർത്ഥിയുമായോ ബന്ധമില്ലാത്തത്.",
+        "footer-legal": "ആർക്കൈവ് ചെയ്ത ജനകീയ സംരംഭം &nbsp;·&nbsp; ബാധ്യതകളില്ല &nbsp;·&nbsp; വിവരങ്ങൾ ശേഖരിച്ചിട്ടില്ല"
+      }
     };
-    window.requestAnimationFrame(step);
-  }
 
-  window.addEventListener('mousedown', (e) => {
-    confetti({
-      particleCount: 25, spread: 60,
-      origin: { x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight },
-      colors: ['#d4af37', '#1a3c2a', '#f5f0e8'],
-      ticks: 150, gravity: 0.8, scalar: 0.8, zIndex: 1000
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function setLanguage(lang, pushState = true) {
+      document.documentElement.lang = lang;
+
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+
+      // Update specific ID elements
+      document.getElementById('hero-title').innerHTML = translations[lang]['hero-title'];
+      document.getElementById('hero-subtitle').innerHTML = translations[lang]['hero-subtitle'];
+      document.getElementById('victory-sash').innerHTML = translations[lang]['victory-sash'];
+      document.getElementById('frame-caption').innerHTML = translations[lang]['frame-caption'];
+
+      // Update buttons
+      const btnEn = document.getElementById('lang-en');
+      const btnMl = document.getElementById('lang-ml');
+      if (lang === 'en') {
+        btnEn.style.background = 'var(--gold)'; btnEn.style.color = '#1a3c2a';
+        btnMl.style.background = 'transparent'; btnMl.style.color = 'var(--cream)';
+      } else {
+        btnMl.style.background = 'var(--gold)'; btnMl.style.color = '#1a3c2a';
+        btnEn.style.background = 'transparent'; btnEn.style.color = 'var(--cream)';
+      }
+
+      // Persist language in URL
+      if (pushState) {
+        const url = new URL(window.location);
+        url.searchParams.set('lang', lang);
+        window.history.pushState({}, '', url);
+      }
+    }
+
+    // Initial load logic
+    window.addEventListener('load', () => {
+      // Check URL for language preference
+      const langParam = getQueryParam('lang');
+      if (langParam === 'ml') {
+        setLanguage('ml', false);
+      }
+
+      const duration = 3 * 1000;
+      const animationEnd = Date.now() + duration;
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+      function randomInRange(min, max) { return Math.random() * (max - min) + min; }
+      const interval = setInterval(function () {
+        const timeLeft = animationEnd - Date.now();
+        if (timeLeft <= 0) return clearInterval(interval);
+        const particleCount = 50 * (timeLeft / duration);
+        confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+        confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+      }, 250);
+
+      animateValue("stat-reached", 0, 1100, 2000, "+");
+      animateValue("stat-visits", 0, 850, 2000, "+");
+      animateValue("stat-emails", 0, 300, 2000, "+");
+      animateValue("stat-days", 0, 7, 2000, "");
     });
-  });
 
-  // Generate floating gold sparkles
-  const hero = document.querySelector('.hero');
-  for (let i = 0; i < 20; i++) {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.style.left = Math.random() * 100 + '%';
-    sparkle.style.animationDelay = Math.random() * 5 + 's';
-    sparkle.style.opacity = Math.random();
-    hero.appendChild(sparkle);
-  }
-</script>
+    function animateValue(id, start, end, duration, suffix) {
+      const obj = document.getElementById(id);
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const val = Math.floor(progress * (end - start) + start);
+        obj.innerHTML = val + suffix;
+        if (progress < 1) window.requestAnimationFrame(step);
+      };
+      window.requestAnimationFrame(step);
+    }
+
+    window.addEventListener('mousedown', (e) => {
+      confetti({
+        particleCount: 25, spread: 60,
+        origin: { x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight },
+        colors: ['#d4af37', '#1a3c2a', '#f5f0e8'],
+        ticks: 150, gravity: 0.8, scalar: 0.8, zIndex: 1000
+      });
+    });
+
+    // Generate floating gold sparkles
+    const hero = document.querySelector('.hero');
+    for (let i = 0; i < 20; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = Math.random() * 100 + '%';
+      sparkle.style.animationDelay = Math.random() * 5 + 's';
+      sparkle.style.opacity = Math.random();
+      hero.appendChild(sparkle);
+    }
+  </script>
 
 </body>
+
 </html>
